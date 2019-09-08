@@ -7,7 +7,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ticket"
         android:label="Easy Booking"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ticket"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

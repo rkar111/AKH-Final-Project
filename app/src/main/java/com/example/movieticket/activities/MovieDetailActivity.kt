@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import com.bumptech.glide.Glide
-import com.example.movieticket.R
+
 import com.example.movieticket.data.model.MovieListModel
 import com.example.movieticket.data.vos.MoviesVO
 import com.example.movieticket.data.vos.ShowTimeVO
@@ -15,6 +15,16 @@ import com.example.movieticket.delegates.ShowTimeItemDelegate
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import kotlinx.android.synthetic.main.activity_movie_detail.*
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import android.annotation.TargetApi
+import android.icu.util.Calendar
+import android.os.Build
+import androidx.core.app.ComponentActivity
+import androidx.core.app.ComponentActivity.ExtraData
+import androidx.core.content.ContextCompat.getSystemService
+import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+import java.text.SimpleDateFormat
 
 
 class MovieDetailActivity : BaseActivity() {
@@ -42,15 +52,25 @@ class MovieDetailActivity : BaseActivity() {
 
     }
 
+    @TargetApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_movie_detail)
+        setContentView(com.example.movieticket.R.layout.activity_movie_detail)
         setSupportActionBar(toolbar)
 
         if (supportActionBar != null) {
-            supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_arrow_back)
+            supportActionBar!!.setHomeAsUpIndicator(com.example.movieticket.R.drawable.ic_arrow_back)
             supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         }
+
+        val calendar = Calendar.getInstance()
+
+        calendar.add(Calendar.DAY_OF_YEAR, 1)
+        val tomorrow = calendar.getTime()
+
+        val dateFormat = SimpleDateFormat("dd-MMM-yyyy")
+
+        val tomorrowAsString = dateFormat.format(tomorrow)
 
         val movieId = intent.getStringExtra(IE_MOVIE_ID)
         mMovie = MovieListModel.getInstance().getMovieById(movieId)
@@ -64,6 +84,7 @@ class MovieDetailActivity : BaseActivity() {
         mFirebaseUser = FirebaseAuth.getInstance().currentUser!!
         mModel = MovieListModel.getInstance()
 
+        tv_tmrw_date.text = tomorrowAsString
         bindData()
 
 
@@ -97,6 +118,7 @@ class MovieDetailActivity : BaseActivity() {
         tv_cinema_name.text = mMovie.cinema!![0].cinemaName
         tv_imdb_rate.text = mMovie.imdbRate
         tv_show_time.text = mMovie.showTime!![0].showTime
+
     }
 
 
