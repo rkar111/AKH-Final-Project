@@ -1,7 +1,6 @@
 package com.example.movieticket.viewholders
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.movieticket.data.vos.MoviesVO
 import com.example.movieticket.delegates.MovieListItemDelegate
@@ -14,7 +13,7 @@ class ItemMovieViewHolder(itemView: View, private val mDelegate: MovieListItemDe
 
         mData = data
         itemView.tv_movie_name.text = data.movieName
-        itemView.tv_movie_info.text = data.movieDuration
+        itemView.tv_movie_info.text = data.language
         if (data.moviePoster != null) {
             itemView.iv_poster.visibility = View.VISIBLE
             Glide.with(itemView.iv_poster.context)
@@ -23,11 +22,13 @@ class ItemMovieViewHolder(itemView: View, private val mDelegate: MovieListItemDe
         } else {
             itemView.iv_poster.visibility = View.GONE
         }
+        itemView.tv_imdb_rate.text = data.imdbRate
+        itemView.tv_movie_time.text = data.movieDuration
 
     }
 
-    override fun onClick(v: View?) {
-
+    override fun onClick(v: View) {
+        mDelegate.onTapMovieItem(mData!!)
     }
 
 }

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium"
+    android:elevation="4dp"
+    app:cardCornerRadius="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_booking_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_medium_2"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:text="14342343242"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_heading_2x"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_booking_id"
+            android:layout_alignLeft="@id/tv_booking_id"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Movie "
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_movie_my_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_booking_id"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toEndOf="@id/tv_language"
+            android:text="English"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_cinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_language"
+            android:layout_alignLeft="@id/tv_booking_id"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Cinema "
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_cinema_my_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_language"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toEndOf="@id/tv_cinema"
+            android:text="English"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+
+        <TextView
+            android:id="@+id/tv_showt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cinema"
+            android:layout_alignLeft="@id/tv_booking_id"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="Show Time "
+            android:textColor="@color/secondary_text"
+            android:textSize="@dimen/text_regular" />
+
+        <TextView
+            android:id="@+id/tv_show_time_my_booking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cinema_my_booking"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium_2"
+            android:layout_toEndOf="@id/tv_showt"
+            android:text="English"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/text_regular" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

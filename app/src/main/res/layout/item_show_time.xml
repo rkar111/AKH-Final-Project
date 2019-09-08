@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_time"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/tv_cinema_name"
+    android:layout_margin="@dimen/margin_medium"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_gradient"
+        android:padding="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/tv_show_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/margin_medium"
+            android:background="@drawable/tv_rounder_corner"
+            android:fontFamily="@font/simply_rounded"
+            android:padding="8dp"
+            android:text="9:00 - 12:00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x" />
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

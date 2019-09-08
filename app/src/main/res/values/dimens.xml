@@ -35,6 +35,7 @@
     <dimen name="text_big_3x">80sp</dimen>
     <dimen name="healthcare_image_height">220dp</dimen>
     <dimen name="author_image_size">40dp</dimen>
+    <dimen name="poster_height">360dp</dimen>
 
     <!-- App specific values -->
 </resources>
