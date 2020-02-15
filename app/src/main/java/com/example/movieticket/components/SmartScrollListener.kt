@@ -4,9 +4,6 @@ package com.example.movieticket.components
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-/**
- * Created by aung on 11/26/17.
- */
 
 class SmartScrollListener(private val mSmartScrollListener: OnSmartScrollListener) :
     RecyclerView.OnScrollListener() {

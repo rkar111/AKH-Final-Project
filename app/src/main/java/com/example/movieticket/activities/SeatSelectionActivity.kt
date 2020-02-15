@@ -88,13 +88,11 @@ class SeatSelectionActivity : BaseActivity(), CompoundButton.OnCheckedChangeList
         }
 
         button2.setOnClickListener {
-            for (f in 0 until 10) {
+         /*   for (f in 0 until 10)
                 if (checkBoxList[f].isChecked != true)  {
                     Toast.makeText(applicationContext, "Please Select Seat", Toast.LENGTH_SHORT)
                         .show()
-                } else {
-
-
+                } else {*/
                     for (b in 0 until 10) {
                         Log.e("Check", "$b Box")
                         //booleanArray[b] = !(checkBoxList[b].isChecked || !checkBoxList[b].isEnabled)
@@ -130,8 +128,8 @@ class SeatSelectionActivity : BaseActivity(), CompoundButton.OnCheckedChangeList
                         this
                     )
                     startActivity(intent)
-                }
-            }
+
+
         }
 
     }

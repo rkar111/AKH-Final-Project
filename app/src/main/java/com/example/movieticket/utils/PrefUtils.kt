@@ -5,10 +5,6 @@ import android.content.SharedPreferences
 import com.example.movieticket.R
 
 
-/**
- * Created by myolwin00 on 10/4/17.
- */
-
 object PrefUtils {
 
     fun getSharedPrefs(context: Context): SharedPreferences {

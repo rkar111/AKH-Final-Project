@@ -6,10 +6,6 @@ import com.example.movieticket.data.vos.ShowTimeVO
 import com.example.movieticket.data.vos.UserVO
 
 
-/**
- * Created by Hein Htet Oo on 11/28/2017.
- */
-
 class DataEvents {
 
 

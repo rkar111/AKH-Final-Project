@@ -1,8 +1,5 @@
 package com.example.movieticket.data.vos
 
-/**
- * Created by yepyaesonetun on 9/12/18.
- **/
 class UserVO(
     var userId: String? = null,
     var userName: String? = null,

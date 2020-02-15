@@ -118,7 +118,7 @@ class MovieDetailActivity : BaseActivity() {
         tv_cinema_name.text = mMovie.cinema!![0].cinemaName
         tv_imdb_rate.text = mMovie.imdbRate
         tv_show_time.text = mMovie.showTime!![0].showTime
-
+        tv_ticket_price.text = mMovie.ticketPrice.toString()
     }
 
 

@@ -39,5 +39,8 @@ class MoviesVO {
     @SerializedName("showTime")
     var showTime: List<ShowTimeVO>? = null
 
+    @SerializedName("ticketPrice")
+    var ticketPrice: Int? = null
+
 
 }
