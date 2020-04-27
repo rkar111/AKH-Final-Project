@@ -17,10 +17,10 @@ class SmartScrollListener(private val mSmartScrollListener: OnSmartScrollListene
     override fun onScrolled(rv: RecyclerView, dx: Int, dy: Int) {
         super.onScrolled(rv, dx, dy)
 
-        val visibleItemCount = rv.getLayoutManager()!!.getChildCount()
-        val totalItemCount = rv.getLayoutManager()!!.getItemCount()
+        val visibleItemCount = rv.layoutManager!!.childCount
+        val totalItemCount = rv.layoutManager!!.itemCount
         val pastVisibleItems =
-            (rv.getLayoutManager() as LinearLayoutManager).findFirstVisibleItemPosition()
+            (rv.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
 
         if (visibleItemCount + pastVisibleItems < totalItemCount) {
             isListEndReached = false
@@ -30,7 +30,7 @@ class SmartScrollListener(private val mSmartScrollListener: OnSmartScrollListene
     override fun onScrollStateChanged(recyclerView: RecyclerView, scrollState: Int) {
         super.onScrollStateChanged(recyclerView, scrollState)
         if (scrollState == RecyclerView.SCROLL_STATE_IDLE
-            && (recyclerView.getLayoutManager() as LinearLayoutManager).findLastCompletelyVisibleItemPosition() === recyclerView.getAdapter()!!.getItemCount() - 1
+            && (recyclerView.layoutManager as LinearLayoutManager).findLastCompletelyVisibleItemPosition() === recyclerView.adapter!!.itemCount - 1
             && !isListEndReached
         ) {
             isListEndReached = true

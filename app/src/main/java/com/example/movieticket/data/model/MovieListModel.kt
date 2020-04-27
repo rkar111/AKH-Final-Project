@@ -20,7 +20,7 @@ import java.lang.Exception
 class MovieListModel private constructor(context: Context) {
 
 
-    var mDatabaseReference: DatabaseReference? = null
+    private var mDatabaseReference: DatabaseReference? = null
     lateinit var mMovieListDR: DatabaseReference
     lateinit var mTicketListDR: DatabaseReference
     lateinit var mBookingListDR: DatabaseReference
